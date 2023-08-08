@@ -49,13 +49,15 @@ function numeroAleatorioDecimales() {
   return num + min;
 }
 
-  return (
+return (
 
-    <div style={{minHeight:"100vh"}}>
-      hola
-      <Menu/>
-      {randomCite ? 
+  <div style={{minHeight:"100vh"}}>
+    <Menu/>
+
+
+    {randomCite ? 
       <>
+      <h2>probando h2</h2>
     { verWeb ? <VistaWeb texto={randomCite}/>: null}
     { verPdf ?(
       <PDFViewer style={{width:"100%", height:"100vh"}}>
@@ -64,11 +66,10 @@ function numeroAleatorioDecimales() {
      ): null}
 
       </> :null}
-      
-    
-    
-    
-    </div>
+    <h1>Hola</h1>
+    <VistaWeb texto={randomCite}/>
+    <DocuPdf texto={randomCite}/>
+  </div>
   );
 }
 
